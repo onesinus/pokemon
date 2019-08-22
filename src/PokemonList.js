@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route, NavLink, HashRouter } from "react-router-dom";
  
 class PokemonList extends Component {
   constructor(props) {
@@ -34,14 +35,17 @@ class PokemonList extends Component {
             {
               pokemons.length > 0 ? pokemons.map(item => {
               const {name, url, thumbnail} = item;
+              let urlDetail = "/pokemon_detail/"+name;
                return (
-                <img 
-                  key={name} 
-                  src={thumbnail} 
-                  title={name} 
-                  alt={name} 
-                  className="imgPokemon"
-                />
+                <NavLink to={urlDetail}>
+                  <img 
+                    key={name} 
+                    src={thumbnail} 
+                    title={name} 
+                    alt={name} 
+                    className="imgPokemon"
+                  />
+                </NavLink>
               );
             }) : null
           }
