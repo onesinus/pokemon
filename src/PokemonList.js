@@ -29,21 +29,19 @@ class PokemonList extends Component {
  	render() {
       const {pokemons } = this.state;
         return (
-          <div className="boxWhite">
+          <div className="pokemonList">
             <h2>Daftar Pokemon</h2>
             {
               pokemons.length > 0 ? pokemons.map(item => {
               const {name, url, thumbnail} = item;
                return (
-
-               <div key={name} className="bgCircle">
-               <center><img src={thumbnail} alt={name} className="circle"/> </center><br />
-               <div className="ctr">
-                  {name}<br />
-                  {url}
-                </div>
-
-              </div>
+                <img 
+                  key={name} 
+                  src={thumbnail} 
+                  title={name} 
+                  alt={name} 
+                  className="imgPokemon"
+                />
               );
             }) : null
           }
