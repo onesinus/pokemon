@@ -10,11 +10,10 @@ class Main extends Component{
 		return(
 			<HashRouter>
 				<div>
-					<h1 className="title">Pokemon Apps</h1>
 					<ul className="header">
-						<li><NavLink to="/">Pokemon List</NavLink></li>
-						<li><NavLink to="/pokemon_detail">Pokemon Detail</NavLink></li>
+						<img id="logo" src="logo.png"/>
 						<li><NavLink to="/my_pokemon">My Pokemon</NavLink></li>
+						<li><NavLink to="/">Pokemon List</NavLink></li>
 					</ul>
 					<div className="content">
 						<Route exact path="/" component={PokemonList} />

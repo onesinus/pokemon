@@ -1,6 +1,6 @@
 body {
   background-color: #2D3B48;
-  padding: 20px;
+  padding: 0;
   margin: 0;
 }
 .title {
@@ -9,21 +9,26 @@ body {
 h1, h2, p, ul, li {
   font-family: sans-serif;
 }
+
+.header{
+  margin: 0;
+}
+
 ul.header li {
   display: inline;
   list-style-type: none;
-  margin: 0;
 }
 ul.header {
-  background-color: #23BA91;
+  background-color: #ef5350;
   padding: 0;
 }
 ul.header li a {
   color: #FFF;
   font-weight: bold;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px 25px 0;
   display: inline-block;
+  float: right;
 }
 .content {
   background-color: #FFF;
@@ -41,3 +46,7 @@ ul.header li a {
   width: 9vw;
 }
 
+#logo{
+  padding: 1vh 0 0 10vh;
+  height: 5vh;
+}
