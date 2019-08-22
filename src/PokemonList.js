@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, NavLink, HashRouter } from "react-router-dom";
+import { NavLink } from "react-router-dom";
  
 class PokemonList extends Component {
   constructor(props) {
@@ -31,10 +31,10 @@ class PokemonList extends Component {
       const {pokemons } = this.state;
         return (
           <div className="pokemonList">
-            <h2>Daftar Pokemon</h2>
+            <center><h1>Daftar Pokemon</h1></center>
             {
               pokemons.length > 0 ? pokemons.map(item => {
-              const {name, url, thumbnail} = item;
+              const {name, thumbnail} = item;
               let urlDetail = "/pokemon_detail/"+name;
                return (
                 <NavLink to={urlDetail}>
@@ -42,7 +42,7 @@ class PokemonList extends Component {
                     key={name} 
                     src={thumbnail} 
                     title={name} 
-                    alt={name} 
+                    alt={name}
                     className="imgPokemon"
                   />
                 </NavLink>

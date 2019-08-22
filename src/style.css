@@ -46,6 +46,10 @@ ul.header li a {
   width: 9vw;
 }
 
+.imgPokemon:hover{
+  width: 10vw;
+}
+
 #logo{
   padding: 1vh 0 0 10vh;
   height: 5vh;

@@ -11,7 +11,7 @@ class Main extends Component{
 			<HashRouter>
 				<div>
 					<ul className="header">
-						<img id="logo" src="logo.png"/>
+						<img id="logo" src="logo.png" alt="Logo not loaded"/>
 						<li><NavLink to="/my_pokemon">My Pokemon</NavLink></li>
 						<li><NavLink to="/">Pokemon List</NavLink></li>
 					</ul>
