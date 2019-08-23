@@ -33,19 +33,12 @@ class PokemonDetail extends Component {
     return (
       <div>
         <h1>{name}</h1>
-
-        <h2>Moves</h2>
-        <ul>
-          {
-            pokemon_details.moves ? 
-            pokemon_details.moves.map(item => {
-              const {move} = item;
-               return (
-                  <li key={move.name}>{move.name}</li>
-              );
-            }) : null
-          }
-        </ul>
+        <img 
+          src={name+".jpg"} 
+          title={name} 
+          alt={name}
+          className="imgPokemon"
+        />
 
         <h2>Types</h2>
         <ul>
@@ -85,6 +78,21 @@ class PokemonDetail extends Component {
             }) : null
           }
         </ul>
+
+        <h2>Moves</h2>
+        <ul>
+          {
+            pokemon_details.moves ? 
+            pokemon_details.moves.map(item => {
+              const {move} = item;
+               return (
+                  <li key={move.name}>{move.name}</li>
+              );
+            }) : null
+          }
+        </ul>
+
+
       </div>
     );
   }
