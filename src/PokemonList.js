@@ -28,7 +28,7 @@ class PokemonList extends Component {
     }
 
  	render() {
-      const {pokemons } = this.state;
+      const {pokemons} = this.state;
         return (
           <div className="pokemonList">
             <center><h1>Daftar Pokemon</h1></center>
@@ -37,15 +37,15 @@ class PokemonList extends Component {
               const {name, thumbnail} = item;
               let urlDetail = "/pokemon_detail/"+name;
                return (
-                <NavLink to={urlDetail}>
-                  <img 
-                    key={name} 
-                    src={thumbnail} 
-                    title={name} 
-                    alt={name}
-                    className="imgPokemon"
-                  />
-                </NavLink>
+                  <NavLink to={urlDetail}>
+                    <img 
+                      key={name} 
+                      src={thumbnail} 
+                      title={name} 
+                      alt={name}
+                      className="imgPokemon"
+                    />
+                  </NavLink>
               );
             }) : null
           }
