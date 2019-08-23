@@ -39,6 +39,7 @@ class PokemonDetail extends Component {
           alt={name}
           className="imgPokemon"
         />
+        <button>Catch Pokemon</button>
 
         <h2>Types</h2>
         <ul>
