@@ -29,6 +29,7 @@ class PokemonList extends Component {
 
  	render() {
       const {pokemons} = this.state;
+      console.log(pokemons)
         return (
           <div className="pokemonList">
             <center><h1>Daftar Pokemon</h1></center>
@@ -37,9 +38,8 @@ class PokemonList extends Component {
               const {name, thumbnail} = item;
               let urlDetail = "/pokemon_detail/"+name;
                return (
-                  <NavLink to={urlDetail}>
+                  <NavLink key={name}  to={urlDetail}>
                     <img 
-                      key={name} 
                       src={thumbnail} 
                       title={name} 
                       alt={name}
