@@ -26,8 +26,18 @@ class PokemonDetail extends Component {
 
 
 
+
   render() {
     const {name,pokemon_details} = this.state;
+
+	  function catchPokemon(){
+	  	if (Math.random() >= 0.5){
+		  	prompt(name+" berhasil ditangkap \n Masukan nickname untuk pokemon ini");
+	  	}else{
+		  	alert(name + " Berhasil melarikan diri");
+	  	}
+	  }
+
 
     console.log(pokemon_details);
     return (
@@ -39,10 +49,9 @@ class PokemonDetail extends Component {
               src={name+".jpg"} 
               title={name} 
               alt={name}
-              className="imgPokemon"
             />
           </div>
-          <button>Catch Pokemon</button>
+          <button onClick={catchPokemon}>Catch Pokemon</button>
         </center>
           <div className="row">
             <div className="row-30">
