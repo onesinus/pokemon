@@ -1,5 +1,8 @@
 {
   "name": "pokemon",
+  "jest": {
+    "verbose": true
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -28,5 +31,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.3"
   }
 }

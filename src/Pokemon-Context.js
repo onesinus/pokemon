@@ -15,7 +15,7 @@ export class PokemonProvider extends React.Component {
   };
 
   state = {
-    pokemon: [{"name": "Arbok", "nickname":"Bobrok"}],
+    pokemon: [],
     updatepokemon: this.updatepokemon,
     releasepokemon: this.releasepokemon
   };
