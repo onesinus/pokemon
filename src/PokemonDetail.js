@@ -19,7 +19,6 @@ class PokemonDetail extends Component {
       .then(res => res.json())
       .then(pokemon_details => this.setState({
         pokemon_details,
-        isLoaded: false,
         name: pokemon_name
       }))
       .catch(error => console.log('parsing failed', error))
@@ -35,18 +34,24 @@ class PokemonDetail extends Component {
 	  	if (Math.random() >= 0.5){
 		  	return prompt(name+" berhasil ditangkap \n Masukan nickname untuk pokemon ini");
 	  	}else{
-		  	alert(name + " Berhasil melarikan diri");
+		  	alert(name + " Gagal ditangkap [Berhasil melarikan diri]");
 		  	return false;
 	  	}
 	  }
 
-
-    console.log(pokemon_details);
     return (
 	 <PokemonConsumer>
       {({ updatepokemon }) => (
 	      <div id="pokemonDetail">
 	        <center>
+	          <button className="button" onClick={event => {
+	          	let nickname = catchPokemon();
+	          	if(nickname){
+		          	updatepokemon([{name: name, nickname: nickname}]);
+		          	alert("Pokemon berhasil ditambahkan ke [My Pokemon]");
+		          	//this.setState({pokemon: }) // set state to new data witout pokemon catched
+	          	}
+	          }}>Catch {name}</button>
 	          <h1 className="capitalize">{name}</h1>
 	          <div>
 	            <img 
@@ -55,12 +60,6 @@ class PokemonDetail extends Component {
 	              alt={name}
 	            />
 	          </div>
-	          <button onClick={event => {
-	          	let nickname = catchPokemon();
-	          	if(nickname){
-		          	updatepokemon([{name: name, nickname: nickname}]);
-	          	}
-	          }}>Catch Pokemon</button>
 	        </center>
 	          <div className="row">
 	            <div className="row-30">

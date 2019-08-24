@@ -5,7 +5,7 @@ class MyPokemon extends Component {
   render() {
     return (
 	 <PokemonConsumer>
-      {({ pokemon }) => (
+      {({ pokemon, releasepokemon }) => (
 	 	 <React.Fragment>
 	        <h2>My Pokemon</h2>
 	        <p>Pokemon-pokemon yang berhasil ditangkap</p>
@@ -14,15 +14,15 @@ class MyPokemon extends Component {
               const {name, nickname} = item;
     
                return (
-               	<React.Fragment>
+               	<React.Fragment key={Math.random()}>
 	                <img 
-	                  key={name}
 	                  src={`${name}.jpg`} 
 	                  title={name} 
 	                  alt={name}
 	                  className="imgPokemon"
 	                />
 	                <h3>{nickname}</h3>
+	                <button onClick={() => releasepokemon(name)}>Release</button>
 	            </React.Fragment>
               );
             }) : null

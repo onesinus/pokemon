@@ -20,10 +20,7 @@ class PokemonList extends Component {
 
           }
         )))
-        .then(pokemons => this.setState({
-          pokemons,
-          isLoaded: false
-        }))
+        .then(pokemons => this.setState({pokemons}))
         .catch(error => console.log('parsing failed', error))
     }
 
