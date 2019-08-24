@@ -101,3 +101,9 @@ ul.header li a {
   background-image: linear-gradient(to right,#02AAB0,#00CDAC);
   cursor: pointer;
 }
+
+.myPokemon{
+  float: left;
+  margin: 2% 0 0 2%;
+  background-image: linear-gradient(to right,green,red);
+}

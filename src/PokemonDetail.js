@@ -34,7 +34,7 @@ class PokemonDetail extends Component {
 	  	if (Math.random() >= 0.5){
 		  	return prompt(name+" berhasil ditangkap \n Masukan nickname untuk pokemon ini");
 	  	}else{
-		  	alert(name + " Gagal ditangkap [Berhasil melarikan diri]");
+		  	alert(name + " Gagal ditangkap [Berhasil melarikan diri], Coba lagi :p");
 		  	return false;
 	  	}
 	  }
@@ -49,7 +49,6 @@ class PokemonDetail extends Component {
 	          	if(nickname){
 		          	updatepokemon([{name: name, nickname: nickname}]);
 		          	alert("Pokemon berhasil ditambahkan ke [My Pokemon]");
-		          	//this.setState({pokemon: }) // set state to new data witout pokemon catched
 	          	}
 	          }}>Catch {name}</button>
 	          <h1 className="capitalize">{name}</h1>

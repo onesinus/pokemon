@@ -14,16 +14,17 @@ class MyPokemon extends Component {
               const {name, nickname} = item;
     
                return (
-               	<React.Fragment key={Math.random()}>
+               	<div className="myPokemon" key={Math.random()}>
 	                <img 
 	                  src={`${name}.jpg`} 
 	                  title={name} 
 	                  alt={name}
-	                  className="imgPokemon"
 	                />
-	                <h3>{nickname}</h3>
-	                <button onClick={() => releasepokemon(name)}>Release</button>
-	            </React.Fragment>
+	                <center>
+		                <h3>{nickname}</h3>
+		                <button className="button" onClick={() => releasepokemon(name)}>Release</button>
+		            </center>
+	            </div>
               );
             }) : null
           }

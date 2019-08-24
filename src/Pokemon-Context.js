@@ -8,18 +8,10 @@ export class PokemonProvider extends React.Component {
   };
 
   releasepokemon = name => {
-    console.log(this.state.pokemon);
-    console.log(name);
-
     let filteredPokemon = this.state.pokemon.filter(function(pokemon){
-      return [name].indexOf(pokemon.name) > -1;
+      return name !== pokemon.name;
     });
-
-    console.log(filteredPokemon);
-
-
     this.setState({ pokemon: filteredPokemon });
-
   };
 
   state = {
